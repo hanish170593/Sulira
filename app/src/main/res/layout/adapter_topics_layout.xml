@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dim80dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/dim10dp">
+
+    <FrameLayout
+        android:id="@+id/upperLayout"
+        android:layout_width="@dimen/dim80dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/roundedsquare" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTopicImage"
+            android:layout_width="@dimen/dim30dp"
+            android:layout_height="@dimen/dim30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:src="@drawable/jhona" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTopicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/upperLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="@dimen/dim5dp"
+        android:text="Organic"
+        android:fontFamily="@font/rubik"
+        android:textColor="@color/light_blue_black"
+        android:textSize="@dimen/dim10sp" />
+</RelativeLayout>

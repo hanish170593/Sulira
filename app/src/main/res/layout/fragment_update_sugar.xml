@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBackSugarScreen"
+        android:layout_width="@dimen/dim25dp"
+        android:layout_height="@dimen/dim25dp"
+        android:layout_margin="@dimen/dim15dp"
+        android:src="@drawable/back_icon" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/letsStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivBackSugarScreen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:text="Update your sugar level"
+        android:textColor="@color/app_color"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llNumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim45dp"
+        android:layout_below="@+id/letsStart"
+        android:layout_marginStart="@dimen/dim40dp"
+        android:layout_marginTop="@dimen/dim40dp"
+        android:layout_marginEnd="@dimen/dim40dp"
+        android:background="@drawable/rect_white_fill_back">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etSugar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:fontFamily="@font/rubik"
+            android:hint="@string/enter_your_sugar_level"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dim14sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llNumber"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dim40dp"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:text="mg/dL"
+        android:layout_marginTop="@dimen/dim5dp"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/dim14sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btUpdateSugar"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDl"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim40dp"
+        android:background="@drawable/rect_fill_back"
+        android:fontFamily="@font/rubik"
+        android:text="@string/update"
+        android:textColor="@color/white" />
+</RelativeLayout>

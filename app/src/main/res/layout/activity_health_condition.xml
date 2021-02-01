@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dim40dp">
+
+        <FrameLayout
+            android:id="@+id/weighIcon"
+            android:layout_width="@dimen/dim150dp"
+            android:layout_height="@dimen/dim150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dim20dp"
+            android:background="@drawable/weight_screen_icon_back">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dim100dp"
+                android:layout_height="@dimen/dim100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/health_condition_icon" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/step1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weighIcon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dim20dp"
+            android:fontFamily="@font/rubik"
+            android:text="Step 11/13"
+            android:textColor="@color/app_color" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/letsStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/step1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dim10dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:text="@string/health_conditions_if_any"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:id="@+id/weightLbs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/letsStart"
+            android:layout_marginTop="@dimen/dim30dp"
+            android:elevation="@dimen/dim10dp"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btHealthYes"
+                android:layout_width="@dimen/dim80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_fill_back"
+                android:elevation="@dimen/dim10dp"
+                android:fontFamily="@font/rubik"
+                android:text="Yes"
+                android:textSize="@dimen/dim10sp"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btHealthNo"
+                android:layout_width="@dimen/dim80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim20dp"
+                android:layout_toEndOf="@+id/btHealthYes"
+                android:background="@drawable/rect_white_fill_back"
+                android:elevation="@dimen/dim10dp"
+                android:textSize="@dimen/dim10sp"
+                android:fontFamily="@font/rubik"
+                android:text="No" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/selectHealth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weightLbs"
+            android:layout_marginStart="@dimen/dim20dp"
+            android:layout_marginTop="@dimen/dim20dp"
+            android:text="@string/select"
+            android:textColor="@color/black" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHealthCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/selectHealth"
+            android:layout_margin="@dimen/dim20dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btHealthConditionContinue"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rvHealthCondition"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dim30dp"
+            android:layout_marginBottom="@dimen/dim40dp"
+            android:background="@drawable/rect_fill_back"
+            android:fontFamily="@font/rubik"
+            android:text="@string/conitnue"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

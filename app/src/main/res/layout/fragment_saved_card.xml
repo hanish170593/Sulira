@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragments.PaymentFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivPaymentBack"
+        android:layout_width="@dimen/dim25dp"
+        android:layout_height="@dimen/dim25dp"
+        android:layout_margin="@dimen/dim15dp"
+        android:src="@drawable/back_icon"
+        app:tint="@color/black" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/dim20dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Payment"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dim18sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAddNewCardPayment"
+            android:layout_width="@dimen/dim30dp"
+            android:layout_height="@dimen/dim30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/dim20dp"
+            android:background="@drawable/edit_icon_back"
+            android:padding="@dimen/dim5dp"
+            android:src="@drawable/plus"
+            android:tint="#FF7C6D" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dim20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPaymentCardList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnPay" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPay"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dim20dp"
+            android:background="@drawable/rect_fill_back"
+            android:text="Pay"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

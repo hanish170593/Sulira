@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dim10dp"
+    android:background="@color/white"
+    tools:context=".fragments.SettingFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dim25dp"
+        android:layout_height="@dimen/dim25dp"
+        android:src="@drawable/back_icon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:fontFamily="@font/rubik"
+        android:text="Settings"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dim18sp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llMyProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:background="@color/light_color_back"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dim40dp"
+                    android:layout_height="@dimen/dim40dp"
+                    android:src="@drawable/setting_icon_one" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim20dp"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center_vertical"
+                    android:text="My Profile"
+                    android:textSize="14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim5dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dim40dp"
+                    android:layout_height="@dimen/dim40dp"
+                    android:src="@drawable/setting_icon_two" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim20dp"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center_vertical"
+                    android:text="Change Password"
+                    android:textSize="14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim5dp"
+                android:background="@color/light_color_back"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dim40dp"
+                    android:layout_height="@dimen/dim40dp"
+                    android:src="@drawable/setting_icon_three" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim20dp"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center_vertical"
+                    android:text="QR Code"
+                    android:textSize="14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim5dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dim40dp"
+                    android:layout_height="@dimen/dim40dp"
+                    android:src="@drawable/setting_icon_four" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim20dp"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center_vertical"
+                    android:text="Connect with Employer"
+                    android:textSize="14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llPaymentOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim5dp"
+                android:background="@color/light_color_back"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dim40dp"
+                    android:layout_height="@dimen/dim40dp"
+                    android:src="@drawable/setting_icon_five" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim20dp"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center_vertical"
+                    android:text="Payment"
+                    android:textSize="14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llPrivacyPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim5dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dim40dp"
+                    android:layout_height="@dimen/dim40dp"
+                    android:src="@drawable/setting_icon_six" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim20dp"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center_vertical"
+                    android:text="Privacy Policy"
+                    android:textSize="14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llTermAndCondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim5dp"
+                android:background="@color/light_color_back"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dim40dp"
+                    android:layout_height="@dimen/dim40dp"
+                    android:src="@drawable/setting_icon_seven" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim20dp"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center_vertical"
+                    android:text="Terms and Conditions"
+                    android:textSize="14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim5dp"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dim40dp"
+                    android:layout_height="@dimen/dim40dp"
+                    android:src="@drawable/setting_icon_eight" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim20dp"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center_vertical"
+                    android:text="Feedback"
+                    android:textSize="14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim5dp"
+                android:background="@color/light_color_back"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dim40dp"
+                    android:layout_height="@dimen/dim40dp"
+                    android:src="@drawable/setting_icon_nine" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/dim20dp"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center_vertical"
+                    android:text="Logout"
+                    android:textSize="14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

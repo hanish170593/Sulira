@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_back"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dim10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivDismissDialog"
+                android:layout_width="@dimen/dim20dp"
+                android:layout_height="@dimen/dim25dp"
+                android:layout_alignParentStart="true"
+                android:layout_margin="@dimen/dim10dp"
+                android:src="@drawable/down_bottom_sheet" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDismissDialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dim10dp"
+                android:fontFamily="@font/rubik_medium"
+                android:text="@string/skip"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/dim14sp"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dim150dp"
+            android:layout_height="@dimen/dim150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/heart_rate_measure_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik"
+            android:gravity="center"
+            android:text="Heart Rate Measure \nTutorial"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim20dp"
+            android:fontFamily="@font/rubik"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/dim5dp"
+            android:text="As soon as the flashlight of your \nphone will be active, place your \nindex finger on the camera lens to \nmeasure the heart rate."
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btDismissDialog"
+            android:layout_width="@dimen/dim200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim40dp"
+            android:layout_marginBottom="@dimen/dim40dp"
+            android:background="@drawable/rect_fill_back"
+            android:fontFamily="@font/rubik"
+            android:text="@string/conitnue"
+            android:textColor="@color/white" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

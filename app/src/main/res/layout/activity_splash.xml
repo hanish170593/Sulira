@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context=".activity.SplashActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivAppIcon"
+        android:layout_width="@dimen/dim80dp"
+        android:layout_height="@dimen/dim80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim30dp"
+        android:src="@drawable/app_icon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivAppIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/welcome_to_sulira"
+        android:textColor="@color/black"
+        android:textSize="22sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim5dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/sulira"
+        android:textColor="@color/app_color"
+        android:textSize="25sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSmartHealth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvAppName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim5dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/smart_health"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/dim12sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivSplashWelcomeIcon"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_below="@+id/tvSmartHealth"
+        android:layout_marginTop="@dimen/dim30dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/group_men" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btGetStarted"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim30dp"
+        android:background="@drawable/rect_fill_back"
+        android:fontFamily="@font/rubik"
+        android:text="@string/get_started"
+        android:textColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dim20dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAlready"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik"
+            android:text="@string/already_have_an_account" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/tvAlready"
+            android:fontFamily="@font/rubik"
+            android:text="@string/sign_in"
+            android:layout_marginStart="@dimen/dim5dp"
+            android:textColor="@color/app_color" />
+    </RelativeLayout>
+
+</RelativeLayout>

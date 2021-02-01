@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/step1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:fontFamily="@font/rubik"
+        android:text="Step 12/13"
+        android:textColor="@color/app_color" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/letsStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:text="@string/do_you_want_to_turn_on_notifications"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dim18sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/genderSelection"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim150dp"
+        android:layout_below="@+id/letsStart"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:gravity="center"
+        android:padding="@dimen/dim20dp"
+        android:src="@drawable/turn_on_notification" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/tvSkipStep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genderSelection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/dim3dp"
+        android:src="@drawable/notification_details"
+        android:text="@string/select_your_gender_or_simply_skip_this_step"
+        android:textColor="@color/light_blue_black" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btAllowNotification"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSkipStep"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim40dp"
+        android:background="@drawable/rect_fill_back"
+        android:fontFamily="@font/rubik"
+        android:text="@string/allow"
+        android:textColor="@color/white" />
+</RelativeLayout>

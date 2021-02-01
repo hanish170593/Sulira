@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_back"
+    android:backgroundTint="#fff"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dim10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBackHeartRate"
+            android:layout_width="@dimen/dim20dp"
+            android:layout_height="@dimen/dim20dp"
+            android:layout_margin="@dimen/dim15dp"
+            android:src="@drawable/down_bottom_sheet"
+            android:tint="@color/black" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dim150dp"
+            android:layout_height="@dimen/dim150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/heart_screen_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/rubik"
+            android:gravity="center"
+            android:text="Check your Heart Rate"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="8dp">
+            <!--
+
+                        <me.tankery.lib.circularseekbar.CircularSeekBar
+                            android:layout_width="300dp"
+                            android:layout_height="300dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="@dimen/dim10dp"
+                            android:layout_marginTop="@dimen/dim10dp"
+                            android:layout_marginRight="@dimen/dim10dp"
+                            app:circle_color="#EDEBFF"
+                            app:circle_progress_color="@color/app_color"
+                            app:cs_circle_stroke_width="5dp"
+                            app:cs_circle_style="round"
+                            app:cs_negative_enabled="true"
+                            app:cs_pointer_halo_width="1dp"
+                            app:cs_pointer_stroke_width="0dp"
+                            app:pointer_color="@android:color/transparent" />
+            -->
+
+
+            <com.application.suliraapplication.utils.CircularSeekBar
+                android:id="@+id/csHeatBeat"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerInParent="true"
+                app:circle_color="#EDEBFF"
+                app:circle_progress_color="@color/app_color"
+                app:circle_stroke_width="2dp"
+                app:circle_x_radius="180dp"
+                app:circle_y_radius="180dp"
+                app:end_angle="270"
+                app:max="100"
+                app:pointer_alpha_ontouch="100"
+                app:pointer_color="@android:color/transparent"
+                app:pointer_halo_color="@android:color/transparent"
+                app:start_angle="270"
+                app:use_custom_radii="true" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="@dimen/dim200dp"
+                android:layout_height="@dimen/dim200dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center"
+                    android:text="Last Updated:"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/dim14sp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim5dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDateHeart"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/rubik"
+                        android:gravity="center"
+                        android:text="16/10/2020"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/rubik"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/colorPrimaryDark" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--<com.application.suliraapplication.activity.heartbeat.HeartbeatView
+                        android:id="@+id/image"
+                        android:layout_width="@dimen/dim40dp"
+                        android:layout_height="@dimen/dim40dp"
+                        android:layout_centerInParent="true" />-->
+                    <FrameLayout
+                        android:layout_width="@dimen/dim50dp"
+                        android:layout_height="@dimen/dim50dp">
+
+                        <SurfaceView
+                            android:id="@+id/preview"
+                            android:layout_width="@dimen/dim30dp"
+                            android:layout_height="@dimen/dim30dp"
+                            android:layout_gravity="center" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/heart_view" />
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvHeartRate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/rubik"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textColor="#4C5980"
+                        android:textSize="35sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/rubik"
+                        android:text="BPM"
+                        android:textColor="#4C5980"
+                        android:textSize="25sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvStartBPM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim10dp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:text="@string/touch_to_start"
+                    android:textColor="#4C5980" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlHeartView"
+            android:layout_width="@dimen/dim100dp"
+            android:layout_height="@dimen/dim100dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.application.suliraapplication.activity.heartbeat.HeartbeatView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPlaceYourFinger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim40dp"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:text="Place your finger on lens"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/dim14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btUpdateHeartRate"
+            android:layout_width="@dimen/dim200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim15dp"
+            android:layout_marginBottom="@dimen/dim40dp"
+            android:background="@drawable/rect_fill_back"
+            android:fontFamily="@font/rubik"
+            android:text="@string/update"
+            android:textColor="@color/white" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

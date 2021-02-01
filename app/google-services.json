@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "185504967422",
+    "project_id": "sulira-b1970",
+    "storage_bucket": "sulira-b1970.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:185504967422:android:e5bf3eeb64c2b0f05293af",
+        "android_client_info": {
+          "package_name": "com.application.suliraapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "185504967422-9jj3f83n6sko7ldkcbdu6dabn8macm01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtScO1zD2I_SqIagmzZe_T5MLmWR3BXvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "185504967422-9jj3f83n6sko7ldkcbdu6dabn8macm01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

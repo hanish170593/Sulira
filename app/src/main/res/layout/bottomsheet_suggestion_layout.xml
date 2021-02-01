@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dim50dp"
+        android:layout_height="@dimen/dim50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/up_down" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim20dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim30dp"
+                android:background="@drawable/bottom_sheet_back"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dim60dp"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center"
+                    android:text="What needs \nimprovement?"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim40dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dim10dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btSlowLoading"
+                        android:layout_width="@dimen/dim100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rect_fill_back"
+                        android:fontFamily="@font/rubik"
+                        android:gravity="center"
+                        android:text="@string/slow_loading"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btCustomerService"
+                        android:layout_width="@dimen/dim100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim20dp"
+                        android:background="@drawable/ab_negative_back"
+                        android:fontFamily="@font/rubik"
+                        android:gravity="center"
+                        android:text="@string/customer_service"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btNetworkIssue"
+                        android:layout_width="@dimen/dim100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim20dp"
+                        android:background="@drawable/o_negative_back"
+                        android:fontFamily="@font/rubik"
+                        android:gravity="center"
+                        android:text="@string/network_issue"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dim10dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btNotResponsive"
+                        android:layout_width="@dimen/dim100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/o_positive_back"
+                        android:fontFamily="@font/rubik"
+                        android:gravity="center"
+                        android:text="@string/not_responsive"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btNotFunctional"
+                        android:layout_width="@dimen/dim100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim20dp"
+                        android:background="@drawable/ab_positive_back"
+                        android:fontFamily="@font/rubik"
+                        android:gravity="center"
+                        android:text="@string/not_functional"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btSecurityIssue"
+                        android:layout_width="@dimen/dim100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim20dp"
+                        android:background="@drawable/a_negative_back"
+                        android:fontFamily="@font/rubik"
+                        android:gravity="center"
+                        android:text="@string/security_issue"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dim10dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btAppCrash"
+                        android:layout_width="@dimen/dim100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/b_positive_back"
+                        android:fontFamily="@font/rubik"
+                        android:gravity="center"
+                        android:text="@string/app_crash"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btNavigation"
+                        android:layout_width="@dimen/dim100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim20dp"
+                        android:background="@drawable/rect_fill_back"
+                        android:fontFamily="@font/rubik"
+                        android:gravity="center"
+                        android:text="@string/navigation"
+                        android:textColor="@color/white"
+                        android:textSize="8sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btSubmitFeedBack"
+                    android:layout_width="@dimen/dim200dp"
+                    android:layout_height="@dimen/dim45dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dim40dp"
+                    android:layout_marginBottom="@dimen/dim40dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/submit_suggestion_btn" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSelectedIcon"
+            android:layout_width="@dimen/dim80dp"
+            android:layout_height="@dimen/dim80dp"
+            android:layout_gravity="top|center"
+            android:scaleType="fitXY"
+            android:src="@drawable/smile_good" />
+    </FrameLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

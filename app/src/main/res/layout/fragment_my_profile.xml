@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/dim10dp"
+    android:background="@color/white"
+    tools:context=".fragments.MyProfileFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMyProfileBack"
+        android:layout_width="@dimen/dim25dp"
+        android:layout_height="@dimen/dim25dp"
+        android:layout_margin="@dimen/dim10dp"
+        android:src="@drawable/back_icon"
+        android:tint="@color/black" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim10dp"
+            android:layout_marginTop="@dimen/dim20dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center_vertical"
+            android:text="My Profile"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llEditUserProfile"
+            android:layout_width="@dimen/dim30dp"
+            android:layout_height="@dimen/dim30dp"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_icon_back"
+            android:gravity="center">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dim18dp"
+                android:layout_height="@dimen/dim18dp"
+                android:layout_gravity="center"
+                android:src="@drawable/edit_icon" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/dim100dp"
+                android:layout_height="@dimen/dim100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dim20dp"
+                app:cardCornerRadius="@dimen/dim10dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivEditImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/pro_avatar" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etLoggedUserName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim45dp"
+                android:layout_marginStart="@dimen/dim40dp"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:layout_marginEnd="@dimen/dim40dp"
+                android:background="@drawable/rect_white_fill_back"
+                android:elevation="@dimen/dim10dp"
+                android:fontFamily="@font/rubik"
+                android:gravity="center"
+                android:hint="@string/enter_your_name"
+                android:text="Jannie Doe"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim14sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etLoggedUserEmail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim45dp"
+                android:layout_marginStart="@dimen/dim40dp"
+                android:layout_marginTop="@dimen/dim15dp"
+                android:layout_marginEnd="@dimen/dim40dp"
+                android:background="@drawable/rect_white_fill_back"
+                android:elevation="@dimen/dim10dp"
+                android:fontFamily="@font/rubik"
+                android:gravity="center"
+                android:hint="@string/enter_your_email"
+                android:text="jannie@gmail.com"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim14sp" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llNumber"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim45dp"
+                android:layout_below="@+id/numberWeCanUse"
+                android:layout_marginStart="@dimen/dim40dp"
+                android:layout_marginTop="@dimen/dim15dp"
+                android:layout_marginEnd="@dimen/dim40dp"
+                android:background="@drawable/rect_white_fill_back"
+                android:elevation="@dimen/dim10dp">
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/ccPicker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/dim16sp"
+                    app:ccp_arrowColor="@color/black"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_contentColor="@color/black"
+                    app:ccp_showFullName="false"
+                    app:ccp_showNameCode="false"
+                    app:ccp_showPhoneCode="true"
+                    app:ccp_textGravity="RIGHT"
+                    app:ccp_textSize="@dimen/dim14sp" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etLoggedUserPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:fontFamily="@font/rubik"
+                    android:hint="@string/enter_your_mobile_number"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dim14sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etLoggedUserAge"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim45dp"
+                android:layout_marginStart="@dimen/dim40dp"
+                android:layout_marginTop="@dimen/dim15dp"
+                android:layout_marginEnd="@dimen/dim40dp"
+                android:background="@drawable/rect_white_fill_back"
+                android:elevation="@dimen/dim10dp"
+                android:fontFamily="@font/rubik"
+                android:gravity="center"
+                android:hint="@string/enter_your_age"
+                android:text="53"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btUpdateUserData"
+                android:layout_width="@dimen/dim200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dim40dp"
+                android:background="@drawable/rect_fill_back"
+                android:text="@string/save_changes"
+                android:textColor="@color/white" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

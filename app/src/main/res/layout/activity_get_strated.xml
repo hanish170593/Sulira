@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".fragments.GetStartedActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/g_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/g_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ttext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/icon"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dim20dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="@string/you_are_ready_to_go"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ttext"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dim20dp"
+            android:fontFamily="@font/rubik"
+            android:gravity="center"
+            android:text="@string/thanks_for_taking"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dim12sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btFinalGetStart"
+            android:layout_width="@dimen/dim200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dim30dp"
+            android:background="@drawable/rect_white_fill_back"
+            android:fontFamily="@font/rubik"
+            android:text="@string/get_started"
+            android:textSize="@dimen/dim12sp" />
+    </RelativeLayout>
+
+</FrameLayout>

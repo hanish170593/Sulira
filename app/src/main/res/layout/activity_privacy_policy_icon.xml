@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.PrivacyPolicyIconFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPrivacyPolicyIcon"
+                android:layout_width="@dimen/dim200dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:src="@drawable/privacy_policy_icon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivPrivacyPolicyIcon"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/rubik"
+                android:text="@string/step_3_20"
+                android:textColor="@color/app_color" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/step"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim10dp"
+                android:fontFamily="@font/rubik_medium"
+                android:text="@string/privacy_and_terms"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPT"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dim30dp"
+                android:layout_marginTop="@dimen/dim10dp"
+                android:layout_marginEnd="@dimen/dim30dp"
+                android:fontFamily="@font/rubik"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/dim3dp"
+                android:text="@string/sulira_is_fully_committed"
+                android:textColor="@color/light_blue_black"
+                android:textSize="@dimen/dim14sp" />
+
+            <RelativeLayout
+                android:id="@+id/privacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dim30dp"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:layout_marginEnd="@dimen/dim30dp">
+
+                <CheckBox
+                    android:id="@+id/cbChecked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/app_color" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim10dp"
+                    android:layout_toEndOf="@+id/cbChecked"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/dim3dp"
+                    android:text="@string/do_you_agree_to_the_terms_and_n_privacy_policy"
+                    android:textColor="@color/light_blue_black"
+                    android:textSize="@dimen/dim12sp" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btContinue"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/privacyPolicy"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim30dp"
+                android:background="@drawable/rect_fill_back"
+                android:fontFamily="@font/rubik"
+                android:text="@string/conitnue"
+                android:textColor="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btContinue"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:fontFamily="@font/rubik"
+                android:text="@string/terms_and_conditions"
+                android:textColor="@color/app_color" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

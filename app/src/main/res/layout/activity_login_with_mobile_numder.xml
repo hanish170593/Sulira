@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MobileNumberFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/dim25dp"
+        android:layout_height="@dimen/dim25dp"
+        android:layout_margin="@dimen/dim15dp"
+        android:src="@drawable/back_icon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/letsStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivBack"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:text="@string/let_s_start_with_your_mobile_number"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/letsStart"
+        android:layout_margin="@dimen/dim40dp"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:layout_marginEnd="@dimen/dim40dp"
+        android:background="@drawable/rect_white_fill_back"
+        android:elevation="@dimen/dim10dp">
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/dim16sp"
+            app:ccp_arrowColor="@color/black"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_contentColor="@color/black"
+            app:ccp_showFullName="false"
+            app:ccp_showNameCode="false"
+            app:ccp_showPhoneCode="true"
+            app:ccp_textGravity="RIGHT"
+            app:ccp_textSize="@dimen/dim14sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:fontFamily="@font/rubik"
+            android:hint="@string/enter_your_mobile_number"
+            android:inputType="number"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dim14sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btVerifyMob"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim30dp"
+        android:background="@drawable/rect_fill_back"
+        android:fontFamily="@font/rubik"
+        android:text="@string/verify_now"
+        android:textColor="@color/white" />
+</RelativeLayout>

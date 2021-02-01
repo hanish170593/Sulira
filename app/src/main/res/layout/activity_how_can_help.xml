@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/step1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:fontFamily="@font/rubik"
+                android:text="Step 10/13"
+                android:textColor="@color/app_color" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/letsStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/step1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim10dp"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:text="@string/let_us_know_how_we_ncan_help_you"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/chLater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/letsStart"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:fontFamily="@font/rubik"
+                android:text="@string/you_always_can_change_this_later"
+                android:textColor="@color/light_blue_black" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvInterests"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/chLater"
+                android:layout_marginStart="@dimen/dim20dp"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:layout_marginEnd="@dimen/dim20dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btLetHowCanHelpContinue"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rvInterests"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim40dp"
+                android:background="@drawable/rect_fill_back"
+                android:fontFamily="@font/rubik"
+                android:text="@string/conitnue"
+                android:layout_marginBottom="@dimen/dim40dp"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

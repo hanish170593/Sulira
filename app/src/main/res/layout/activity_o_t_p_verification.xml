@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/step1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:text="Step 2/13"
+        android:fontFamily="@font/rubik"
+        android:textColor="@color/app_color" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/letsStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:gravity="center"
+        android:text="Verify your number"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:fontFamily="@font/rubik_medium" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/numberWeCanUse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/letsStart"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:fontFamily="@font/rubik"
+        android:text="Wel’ll text you on 0265987512"
+        android:textColor="@color/light_blue_black" />
+
+    <com.goodiebag.pinview.Pinview
+        android:id="@+id/pinview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/numberWeCanUse"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:elevation="@dimen/dim10dp"
+        app:cursorVisible="true"
+        app:forceKeyboard="false"
+        app:hint="0"
+        app:inputType="number"
+        app:password="false"
+        android:fontFamily="@font/rubik"
+        app:pinBackground="@drawable/circle"
+        app:pinHeight="@dimen/dim40dp"
+        app:pinLength="4"
+        app:pinWidth="@dimen/dim40dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSendNewCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pinview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:text="@string/send_me_a_new_code"
+        android:fontFamily="@font/rubik"
+        android:textColor="@color/app_color" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btOtpContinue"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSendNewCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim30dp"
+        android:fontFamily="@font/rubik"
+        android:background="@drawable/rect_fill_back"
+        android:text="@string/conitnue"
+        android:textColor="@color/white" />
+</RelativeLayout>

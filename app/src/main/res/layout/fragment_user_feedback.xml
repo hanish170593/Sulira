@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wheel_bg"
+    android:orientation="vertical"
+    tools:context=".fragments.UserFeedbackFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dim25dp"
+        android:layout_height="@dimen/dim25dp"
+        android:layout_margin="@dimen/dim15dp"
+        android:src="@drawable/back_icon"
+        app:tint="@color/white" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:fontFamily="@font/rubik_bold"
+                android:gravity="center"
+                android:text="USER FEEDBACK"
+                android:textColor="#7FE3F0"
+                android:textSize="@dimen/dim14sp"
+                app:fontFamily="@font/rubik" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim10dp"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:text="How was your overall \nexperience?"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSelectedFeedBack"
+                android:layout_width="@dimen/dim100dp"
+                android:layout_height="@dimen/dim100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dim40dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFeedbackLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim10dp"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:text="I am satisfied!"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dim16sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dim40dp"
+                android:layout_height="@dimen/dim40dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dim40dp"
+                android:src="@drawable/down_btn" />
+
+            <com.lukedeighton.wheelview.WheelView
+                android:id="@+id/wvUserFeedBack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:repeatItems="true"
+                app:rotatableWheelDrawable="false"
+                app:selectionAngle="90.0"
+                app:wheelColor="@color/app_color"
+                app:wheelItemCount="14"
+                app:wheelItemRadius="43dp"
+                app:wheelOffsetY="60dp"
+                app:wheelPadding="13dp"
+                app:wheelPosition="bottom"
+                app:wheelRadius="276dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/wheel"
+                android:visibility="gone" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:id="@+id/vBlurEffect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@color/extra_light_black" />
+    </FrameLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

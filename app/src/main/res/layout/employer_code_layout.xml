@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_back"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dim10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dim25dp"
+            android:layout_height="@dimen/dim25dp"
+            android:src="@drawable/down_bottom_sheet" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dim150dp"
+            android:layout_height="@dimen/dim150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/emploer_code_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/employer_code"
+            android:textColor="@color/black"
+            android:fontFamily="@font/rubik"
+            android:textSize="18sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim20dp"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/dim5dp"
+            android:fontFamily="@font/rubik"
+            android:text="Enter the employer’s code and then \nconnect with the employer."
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dim45dp"
+            android:layout_marginStart="@dimen/dim40dp"
+            android:layout_marginTop="@dimen/dim40dp"
+            android:layout_marginEnd="@dimen/dim40dp"
+            android:background="@drawable/rect_white_fill_back"
+            android:elevation="@dimen/dim5dp"
+            android:gravity="center"
+            android:hint="Employer Code"
+            android:fontFamily="@font/rubik"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dim14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="@dimen/dim200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim40dp"
+            android:layout_marginBottom="@dimen/dim40dp"
+            android:background="@drawable/rect_fill_back"
+            android:text="Connect"
+            android:fontFamily="@font/rubik"
+            android:textColor="@color/white" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.core.widget.NestedScrollView>

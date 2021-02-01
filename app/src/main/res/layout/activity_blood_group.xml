@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/weighIcon"
+        android:layout_width="@dimen/dim150dp"
+        android:layout_height="@dimen/dim150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:background="@drawable/weight_screen_icon_back">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dim50dp"
+            android:layout_height="@dimen/dim100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/blood" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/step1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weighIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:fontFamily="@font/rubik"
+        android:text="Step 7/13"
+        android:textColor="@color/app_color" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/letsStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:text="@string/what_is_your_blood_type"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/a"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/letsStart"
+        android:layout_marginTop="@dimen/dim30dp"
+        android:elevation="@dimen/dim10dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btAPositive"
+            android:layout_width="@dimen/dim100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/a_positive_back"
+            android:elevation="@dimen/dim10dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="A+ "
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btANegative"
+            android:layout_width="@dimen/dim100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim20dp"
+            android:layout_toEndOf="@+id/btAPositive"
+            android:background="@drawable/a_negative_back"
+            android:elevation="@dimen/dim10dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="A-"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/a"
+        android:layout_marginTop="@dimen/dim15dp"
+        android:elevation="@dimen/dim10dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btBPositive"
+            android:layout_width="@dimen/dim100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/b_positive_back"
+            android:elevation="@dimen/dim10dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="B+"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btBNegative"
+            android:layout_width="@dimen/dim100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim20dp"
+            android:layout_toEndOf="@+id/btBPositive"
+            android:background="@drawable/b_negative_back"
+            android:elevation="@dimen/dim10dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="B-"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/o"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/b"
+        android:layout_marginTop="@dimen/dim15dp"
+        android:elevation="@dimen/dim10dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btOPositive"
+            android:layout_width="@dimen/dim100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/o_positive_back"
+            android:elevation="@dimen/dim10dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="O+"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btoNegative"
+            android:layout_width="@dimen/dim100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim20dp"
+            android:layout_toEndOf="@+id/btOPositive"
+            android:background="@drawable/o_negative_back"
+            android:elevation="@dimen/dim10dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="O-"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/o"
+        android:layout_marginTop="@dimen/dim15dp"
+        android:elevation="@dimen/dim10dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btabPositive"
+            android:layout_width="@dimen/dim100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ab_positive_back"
+            android:elevation="@dimen/dim10dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="AB+"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btAbNegative"
+            android:layout_width="@dimen/dim100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim20dp"
+            android:layout_toEndOf="@+id/btabPositive"
+            android:background="@drawable/ab_negative_back"
+            android:elevation="@dimen/dim10dp"
+            android:fontFamily="@font/rubik_medium"
+            android:text="AB-"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btBloodContinue"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ab"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim30dp"
+        android:background="@drawable/rect_fill_back"
+        android:fontFamily="@font/rubik"
+        android:text="@string/conitnue"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

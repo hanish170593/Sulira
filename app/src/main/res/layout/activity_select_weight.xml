@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:seek="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:id="@+id/weighIcon"
+        android:layout_width="@dimen/dim150dp"
+        android:layout_height="@dimen/dim150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:background="@drawable/weight_screen_icon_back">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dim50dp"
+            android:layout_height="@dimen/dim100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/weight_screen_icon" />
+    </FrameLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/step1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weighIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:fontFamily="@font/rubik"
+        android:text="Step 5/13"
+        android:textColor="@color/app_color" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/letsStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:text="@string/what_is_your_weight"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/weightLbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/letsStart"
+        android:layout_marginTop="@dimen/dim30dp"
+        android:elevation="@dimen/dim10dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btLbs"
+            android:layout_width="@dimen/dim100dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_fill_back"
+            android:elevation="@dimen/dim10dp"
+            android:fontFamily="@font/rubik"
+            android:text="lbs"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btKgs"
+            android:layout_width="@dimen/dim100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dim20dp"
+            android:layout_toEndOf="@+id/btLbs"
+            android:background="@drawable/rect_white_fill_back"
+            android:elevation="@dimen/dim10dp"
+            android:fontFamily="@font/rubik"
+            android:text="Kg" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llHeightLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weightLbs"
+        android:layout_marginTop="@dimen/dim40dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="@color/app_color"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWeightScaleType"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/dim5dp"
+            android:gravity="center|bottom"
+            android:text="LBS"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/dim12sp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.application.suliraapplication.utils.SimpleRulerView
+        android:id="@+id/heightRuler"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_below="@+id/llHeightLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/dim40dp"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:layout_marginEnd="@dimen/dim40dp"
+        android:visibility="gone"
+        seek:intervalValue="1"
+        seek:maxValue="400"
+        seek:minValue="10"
+        seek:retainLength="2"
+        seek:rulerColor="@color/app_color"
+        seek:textColor="@color/app_color" />
+
+    <com.kevalpatel2106.rulerpicker.RulerValuePicker
+        android:id="@+id/weightRulerValuePicker"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim80dp"
+        android:layout_below="@+id/heightRuler"
+        android:layout_marginStart="@dimen/dim40dp"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:layout_marginEnd="@dimen/dim40dp"
+        android:background="@color/white"
+        app:indicator_color="@color/app_color"
+        app:indicator_interval="14dp"
+        app:indicator_width="2dp"
+        app:notch_color="@color/app_color"
+        app:ruler_text_size="6sp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btWeightContinue"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weightRulerValuePicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:layout_marginBottom="@dimen/dim40dp"
+        android:background="@drawable/rect_fill_back"
+        android:fontFamily="@font/rubik"
+        android:text="@string/conitnue"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

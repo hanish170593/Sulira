@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.PrivacyPolicyIconFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivHalf"
+            android:layout_marginTop="@dimen/dim20dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivPrivacyPolicyIcon"
+                android:layout_width="@dimen/dim200dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim40dp"
+                android:src="@drawable/enable_bio_matric" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/step"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ivPrivacyPolicyIcon"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:fontFamily="@font/rubik"
+                android:text="@string/step_3_20"
+                android:textColor="@color/app_color" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/step"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim10dp"
+                android:fontFamily="@font/rubik_medium"
+                android:text="@string/enable_face_id"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPT"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/dim30dp"
+                android:layout_marginTop="@dimen/dim10dp"
+                android:layout_marginEnd="@dimen/dim30dp"
+                android:fontFamily="@font/rubik"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/dim3dp"
+                android:text="@string/if_you_enable_face_id_you_don_t_need_to_enter_your_password_when_you_login"
+                android:textColor="@color/light_blue_black"
+                android:textSize="@dimen/dim14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btActivate"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim40dp"
+                android:background="@drawable/rect_fill_back"
+                android:fontFamily="@font/rubik"
+                android:text="@string/activate"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

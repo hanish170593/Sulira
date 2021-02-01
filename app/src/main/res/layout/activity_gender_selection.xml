@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/step1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:fontFamily="@font/rubik"
+        android:text="Step 4/13"
+        android:textColor="@color/app_color" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/letsStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:text="@string/which_one_are_you"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <RelativeLayout
+        android:id="@+id/genderSelection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/letsStart"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:gravity="center"
+        android:padding="@dimen/dim20dp">
+
+        <FrameLayout
+            android:id="@+id/flMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMale"
+                android:layout_width="@dimen/dim150dp"
+                android:layout_height="@dimen/dim200dp"
+                android:layout_marginEnd="@dimen/dim5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/male_icon" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMaleSelected"
+                android:layout_width="@dimen/dim30dp"
+                android:layout_height="@dimen/dim30dp"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dim10dp"
+                android:layout_marginEnd="@dimen/dim20dp"
+                android:src="@drawable/for_male_selection" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/flFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/flMale">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dim150dp"
+                android:layout_height="@dimen/dim200dp"
+                android:layout_marginStart="@dimen/dim5dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/female_icon" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFemaleSelected"
+                android:layout_width="@dimen/dim30dp"
+                android:layout_height="@dimen/dim30dp"
+                android:layout_gravity="right"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dim10dp"
+                android:layout_marginEnd="@dimen/dim20dp"
+                android:src="@drawable/for_female_selection" />
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSkipStep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genderSelection"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:fontFamily="@font/rubik"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/dim3dp"
+        android:text="@string/select_your_gender_or_simply_skip_this_step"
+        android:textColor="@color/light_blue_black" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btGenderContinue"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvSkipStep"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim150dp"
+        android:background="@drawable/rect_fill_back"
+        android:fontFamily="@font/rubik"
+        android:text="@string/conitnue"
+        android:textColor="@color/white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btGenderContinue"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/prefer_not_to_choose"
+        android:textColor="@color/app_color" />
+</RelativeLayout>

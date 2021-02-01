@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bottom_sheet_back"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/dim20dp"
+    android:paddingTop="@dimen/dim20dp"
+    android:paddingEnd="@dimen/dim20dp"
+    android:paddingBottom="@dimen/dim50dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPostDismissDialog"
+            android:layout_width="@dimen/dim20dp"
+            android:layout_height="@dimen/dim25dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/down_arrow" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btPost"
+            android:layout_width="@dimen/dim80dp"
+            android:layout_height="@dimen/dim40dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/rect_light_color_fill_back"
+            android:fontFamily="@font/rubik_medium"
+            android:text="Post"
+            android:textColor="@color/app_color"
+            android:textSize="@dimen/dim10sp" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik"
+        android:text="Create post"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dim18sp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:layout_marginBottom="@dimen/dim20dp"
+        android:background="@drawable/rect_chat_box_back"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMyProfilePic"
+            android:layout_width="@dimen/dim40dp"
+            android:layout_height="@dimen/dim40dp"
+            android:src="@drawable/not" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etPostTitle"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dim45dp"
+            android:layout_marginStart="@dimen/dim10dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_white_fill_back"
+            android:fontFamily="@font/rubik"
+            android:hint="What’s on your mind?"
+            android:paddingStart="@dimen/dim10dp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dim14sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etPostMessage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim80dp"
+        android:layout_margin="@dimen/dim10dp"
+        android:background="@drawable/rect_white_fill_back"
+        android:elevation="@dimen/dim10dp"
+        android:fontFamily="@font/rubik"
+        android:gravity="start"
+        android:hint="Write Message here..."
+        android:padding="@dimen/dim10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dim14sp" />
+
+    <FrameLayout
+        android:id="@+id/flSelectedImageContainer"
+        android:layout_width="@dimen/dim100dp"
+        android:layout_height="@dimen/dim100dp"
+        android:layout_margin="@dimen/dim10dp"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPostSelectedImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/explore_dummy_imge" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDeleteSelectedImage"
+            android:layout_width="@dimen/dim25dp"
+            android:layout_height="@dimen/dim25dp"
+            android:layout_gravity="right"
+            android:src="@drawable/delete_post_image" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llShareModule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim10dp"
+            android:fontFamily="@font/rubik"
+            android:text="Add attachment"
+            android:textColor="@color/black"
+            android:textSize="@dimen/dim16sp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim20dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPicPostImage"
+                    android:layout_width="@dimen/dim60dp"
+                    android:layout_height="@dimen/dim60dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/post_camera" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/rubik"
+                    android:padding="@dimen/dim10dp"
+                    android:text="Photo"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dim14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivHeart"
+                        android:layout_width="@dimen/dim60dp"
+                        android:layout_height="@dimen/dim60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/post_heart" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivTickHeart"
+                        android:layout_width="@dimen/dim30dp"
+                        android:layout_height="@dimen/dim30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/check_selected"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/rubik"
+                    android:padding="@dimen/dim10dp"
+                    android:text="Heart"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dim14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBloodSugar"
+                        android:layout_width="@dimen/dim60dp"
+                        android:layout_height="@dimen/dim60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/post_blood_sugar" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivTickBloodSugar"
+                        android:layout_width="@dimen/dim30dp"
+                        android:layout_height="@dimen/dim30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/check_selected"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/rubik"
+                    android:padding="@dimen/dim10dp"
+                    android:text="Blood Sugar"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dim14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim20dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivWeight"
+                        android:layout_width="@dimen/dim60dp"
+                        android:layout_height="@dimen/dim60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/post_weight" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivTickWeight"
+                        android:layout_width="@dimen/dim30dp"
+                        android:layout_height="@dimen/dim30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/check_selected"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/rubik"
+                    android:padding="@dimen/dim10dp"
+                    android:text="Weight"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dim14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivSleep"
+                        android:layout_width="@dimen/dim60dp"
+                        android:layout_height="@dimen/dim60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/post_sleep" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivTickSleep"
+                        android:layout_width="@dimen/dim30dp"
+                        android:layout_height="@dimen/dim30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/check_selected"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/rubik"
+                    android:padding="@dimen/dim10dp"
+                    android:text="Sleep"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dim14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMood"
+                        android:layout_width="@dimen/dim60dp"
+                        android:layout_height="@dimen/dim60dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/post_mood" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivTickMood"
+                        android:layout_width="@dimen/dim30dp"
+                        android:layout_height="@dimen/dim30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/check_selected"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/rubik"
+                    android:padding="@dimen/dim10dp"
+                    android:text="Mood"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dim14sp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

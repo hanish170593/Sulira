@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragments.PostDetailFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/dim25dp"
+        android:layout_height="@dimen/dim25dp"
+        android:layout_margin="@dimen/dim15dp"
+        android:src="@drawable/back_icon"
+        app:tint="@color/black" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dim20dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik"
+                    android:text="HEALTH"
+                    android:textColor="@color/app_color"
+                    android:textSize="@dimen/dim12sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPostTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim10dp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="These Foods and \nMedications Cancer Risk"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dim18sp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim10dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="@dimen/dim10dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivPostUserImage"
+                            android:layout_width="@dimen/dim40dp"
+                            android:layout_height="@dimen/dim40dp"
+                            android:src="@drawable/avatar_one" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvPostUserName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/dim10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/rubik"
+                        android:text="by Joseph Fink" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnFollow"
+                        android:layout_width="@dimen/dim80dp"
+                        android:layout_height="@dimen/dim40dp"
+                        android:background="@drawable/rect_light_color_fill_back"
+                        android:fontFamily="@font/rubik_medium"
+                        android:src="@drawable/follow_btn"
+                        android:text="Follow"
+                        android:textColor="@color/app_color"
+                        android:textSize="@dimen/dim10sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvPostImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim20dp"
+                    app:cardCornerRadius="@dimen/dim10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivPostImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dim200dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/dummy_ye" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvPostOther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim20dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/dim10dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dim10dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOtherPostTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik"
+                            android:gravity="center"
+                            android:text="Sugar"
+                            android:textColor="@color/app_color"
+                            android:textSize="25sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvOtherPostValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim10dp"
+                            android:fontFamily="@font/rubik_medium"
+                            android:gravity="center"
+                            android:text="30 h"
+                            android:textColor="@color/app_color"
+                            android:textSize="40sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPostDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim10dp"
+                    android:fontFamily="@font/rubik"
+                    android:lineSpacingExtra="@dimen/dim5dp"
+                    android:text="Train your mind for a happier, healthier life by learning the fundamentals of mediation and mindfullness. "
+                    android:textColor="@color/light_blue_black" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:background="#E4DFFF"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dim20dp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="Rate &amp; review"
+                    android:textColor="#2D3142"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dim10dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="Share your experience to help others"
+                    android:textSize="@dimen/dim12sp" />
+
+                <RatingBar
+                    android:id="@+id/rbUserRating"
+                    style="@style/ratingStylerating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dim10dp"
+                    android:isIndicator="false"
+                    android:numStars="5"
+                    android:paddingTop="@dimen/dim5dp"
+                    android:paddingBottom="@dimen/dim5dp"
+                    android:progressTint="@color/app_color"
+                    android:rating="3.5"
+                    android:theme="@style/ratingStyle" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dim20dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim20dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvOverallRating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4.7"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dim18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dim25dp"
+                        android:layout_height="@dimen/dim25dp"
+                        android:layout_marginStart="@dimen/dim10dp"
+                        android:src="@drawable/star" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvReviewCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dim10dp"
+                        android:fontFamily="@font/rubik"
+                        android:text="(28 Reviews)"
+                        android:textColor="@color/light_blue_black"
+                        android:textSize="@dimen/dim16sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp"
+                    android:layout_marginTop="@dimen/dim10dp"
+                    tools:listitem="@layout/feedback_post" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim20dp"
+                    android:layout_marginBottom="@dimen/dim20dp"
+                    android:background="@drawable/rect_chat_box_back"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivUserImage"
+                        android:layout_width="@dimen/dim40dp"
+                        android:layout_height="@dimen/dim40dp"
+                        android:src="@drawable/not" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etPostComment"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dim45dp"
+                        android:layout_marginStart="@dimen/dim10dp"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:fontFamily="@font/rubik"
+                        android:hint="Add a Comment..."
+                        android:paddingStart="@dimen/dim10dp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dim14sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/btnPostComment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/dim10dp"
+                        android:fontFamily="@font/rubik_medium"
+                        android:text="Post"
+                        android:textColor="@color/light_blue_black"
+                        android:textSize="@dimen/dim16sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

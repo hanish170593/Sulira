@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SignInActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/dim25dp"
+        android:layout_height="@dimen/dim25dp"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/dim15dp"
+        app:srcCompat="@drawable/back_icon"
+        app:tint="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvHello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim15dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/hello"
+        android:textColor="@color/app_color"
+        android:textSize="22sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/singIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHello"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim5dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/sign_in_your_account"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/singIn">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSingInIcon"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/single_men" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiUserName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim60dp"
+                android:layout_below="@+id/ivSingInIcon"
+                android:layout_marginStart="@dimen/dim30dp"
+                android:layout_marginTop="@dimen/dim15dp"
+                android:layout_marginEnd="@dimen/dim30dp"
+                android:background="@drawable/rect_white_fill_back"
+                android:elevation="@dimen/dim10dp"
+                android:gravity="center_vertical"
+                app:boxBackgroundMode="none"
+                app:hintEnabled="false">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/rubik"
+                    android:hint="@string/enter_username"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="0dp"
+                    android:textSize="@dimen/dim14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tiPassword"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dim60dp"
+                android:layout_below="@+id/tiUserName"
+                android:layout_marginStart="@dimen/dim30dp"
+                android:layout_marginTop="@dimen/dim15dp"
+                android:layout_marginEnd="@dimen/dim30dp"
+                android:background="@drawable/rect_white_fill_back"
+                android:elevation="@dimen/dim10dp"
+                android:gravity="center_vertical"
+                app:boxBackgroundMode="none"
+                app:hintEnabled="false"
+                app:passwordToggleEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etUserPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:fontFamily="@font/rubik"
+                    android:hint="@string/enter_password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:padding="0dp"
+                    android:textSize="@dimen/dim14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlForgetLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tiPassword"
+                android:layout_marginStart="@dimen/dim30dp"
+                android:layout_marginTop="@dimen/dim10dp"
+                android:layout_marginEnd="@dimen/dim30dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvForgetPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/rubik"
+                    android:text="@string/forgot_password"
+                    android:textColor="@color/light_blue_black"
+                    android:textSize="@dimen/dim14sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dim20dp"
+                    android:layout_height="@dimen/dim20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dim10dp"
+                    android:src="@drawable/monkey" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvConWithoutPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlForgetLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:fontFamily="@font/rubik"
+                android:visibility="gone"
+                android:text="@string/continue_without_password"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/dim14sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btLogin"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvConWithoutPassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dim30dp"
+                android:background="@drawable/rect_fill_back"
+                android:fontFamily="@font/rubik"
+                android:text="@string/conitnue"
+                android:textColor="@color/white" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btLogin"
+                android:layout_marginBottom="@dimen/dim20dp"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDontHave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim20dp"
+                    android:fontFamily="@font/rubik"
+                    android:text="@string/don_t_have_an_account_yet" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim5dp"
+                    android:layout_marginTop="@dimen/dim20dp"
+                    android:layout_toEndOf="@+id/tvDontHave"
+                    android:fontFamily="@font/rubik"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/app_color" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

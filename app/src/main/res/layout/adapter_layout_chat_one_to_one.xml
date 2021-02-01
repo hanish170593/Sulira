@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llYourMessageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim10dp"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:layout_marginEnd="@dimen/dim150dp"
+        android:background="@drawable/rect_white_fill_back"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvYourMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="@dimen/dim2dp"
+            android:paddingStart="@dimen/dim10dp"
+            android:fontFamily="@font/rubik"
+            android:text="You can share your quesries with your doctor and medical reports here too"
+            android:textSize="@dimen/dim12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvYourMessageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginTop="@dimen/dim5dp"
+            android:text="08:29 PM"
+            android:fontFamily="@font/rubik"
+            android:textColor="@color/light_black"
+            android:textSize="8sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llMeMessageLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim150dp"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:layout_marginEnd="@dimen/dim10dp"
+        android:background="@drawable/chat_box_back"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMeMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:lineSpacingExtra="@dimen/dim2dp"
+            android:paddingStart="@dimen/dim10dp"
+            android:fontFamily="@font/rubik"
+            android:text="You can share your quesries with your doctor and medical reports here too"
+            android:textSize="@dimen/dim12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMeMessageTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginTop="@dimen/dim5dp"
+            android:text="08:29 PM"
+            android:fontFamily="@font/rubik"
+            android:textColor="@color/light_black"
+            android:textSize="8sp" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

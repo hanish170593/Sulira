@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".fragments.MyProgressFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/app_color"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBackMyProgress"
+            android:layout_width="@dimen/dim25dp"
+            android:layout_height="@dimen/dim25dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/dim10dp"
+            android:src="@drawable/back_icon"
+            app:tint="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProgressType"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/rubik"
+            android:gravity="center"
+            android:text="Weight"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dim16sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dim20dp"
+            android:layout_height="@dimen/dim20dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/dim10dp"
+            android:src="@drawable/share_icon" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/dim40dp"
+            android:background="@color/app_color"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim10dp">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCurrentLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/rubik"
+                        android:text="CURRENT"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dim14sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCurrentWeight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvCurrentLabel"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dim10dp"
+                        android:fontFamily="@font/rubik"
+                        android:text="90"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvProgressDataType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvCurrentLabel"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dim25dp"
+                        android:layout_toEndOf="@+id/tvCurrentWeight"
+                        android:fontFamily="@font/rubik"
+                        android:text=" kg"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dim12sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/dim20dp"
+                    android:layout_height="@dimen/dim20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/weight_icon" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik"
+                        android:gravity="center"
+                        android:text="last updated"
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvLastUpdatedAt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim20dp"
+                        android:fontFamily="@font/rubik"
+                        android:gravity="center"
+                        android:text="10 October"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dim14sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:background="@drawable/bottom_sheet_back"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim20dp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dim10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/dim5dp"
+                        android:fontFamily="@font/rubik_medium"
+                        android:text="@string/my_progress"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dim18sp"
+                        tools:ignore="RelativeOverlap" />
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spnProgressReport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/chat_box_back" />
+                </RelativeLayout>
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/chart"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_above="@+id/seekBar1"
+                    android:clickable="false" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="@dimen/dim20dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/graphh"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dim20dp"
+                    android:background="@drawable/weight_suggestion_back"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llBmiUI"
+                        android:layout_width="@dimen/dim60dp"
+                        android:layout_height="@dimen/dim80dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="@dimen/dim20dp"
+                        android:background="@drawable/bmi_back"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik"
+                            android:gravity="center"
+                            android:text="BMI"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dim12sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvBmi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim5dp"
+                            android:fontFamily="@font/rubik"
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dim18sp"
+                            android:textStyle="bold" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llText"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dim20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvBmiText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik"
+                            android:lineSpacingExtra="@dimen/dim5dp"
+                            android:text="Your weight is under \nnormal. Suggested \nrange is 80-90kg"
+                            android:textColor="@color/light_blue_black"
+                            android:textSize="@dimen/dim12sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim5dp"
+                            android:fontFamily="@font/rubik"
+                            android:text="Read more"
+                            android:textColor="@color/app_color"
+                            android:textSize="@dimen/dim10sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMan"
+                        android:layout_width="@dimen/dim70dp"
+                        android:layout_height="@dimen/dim80dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_gravity="bottom"
+                        android:layout_toEndOf="@+id/llText"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/w_sugg_man_icon" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dim20dp"
+                    android:padding="@dimen/dim10dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="@dimen/dim10dp"
+                        android:fontFamily="@font/rubik_medium"
+                        android:text="Journal"
+                        android:textColor="@color/black"
+                        android:textSize="22sp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/dim100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/more_icon" />
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvWeightList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim20dp"
+                    android:layout_marginTop="@dimen/dim10dp"
+                    android:layout_marginEnd="@dimen/dim20dp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btUpdate"
+                    android:layout_width="@dimen/dim200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/dim20dp"
+                    android:background="@drawable/rect_fill_back"
+                    android:fontFamily="@font/rubik"
+                    android:gravity="center"
+                    android:textSize="@dimen/dim12sp"
+                    android:text="Update"
+                    android:textColor="@color/white" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

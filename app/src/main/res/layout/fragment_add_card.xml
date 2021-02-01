@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F6FA"
+    android:orientation="vertical"
+    tools:context=".fragments.AddCardFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivAddCardBack"
+        android:layout_width="@dimen/dim25dp"
+        android:layout_height="@dimen/dim25dp"
+        android:layout_margin="@dimen/dim15dp"
+        android:src="@drawable/back_icon"
+        app:tint="@color/black" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim20dp"
+        android:fontFamily="@font/rubik_medium"
+        android:text="Add Card"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dim18sp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dim10dp">
+
+        <WebView
+            android:id="@+id/webViewPwa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+    <!--  <include layout="@layout/content_checkout" />-->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dim20dp"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rect_white_fill_back"
+            android:orientation="horizontal"
+            android:padding="@dimen/dim20dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/dim20dp"
+                android:layout_height="@dimen/dim20dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/mastercard" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dim10dp"
+                android:background="@null"
+                android:fontFamily="@font/rubik"
+                android:hint="xxxx xxxx xxxx xxxx"
+                android:text="8222  7580  7271"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim14sp" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim20dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="start"
+                android:background="@drawable/rect_white_fill_back"
+                android:fontFamily="@font/rubik"
+                android:gravity="center"
+                android:hint="xx/xx"
+                android:padding="@dimen/dim20dp"
+                android:text="12/27"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dim14sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:background="@drawable/rect_white_fill_back"
+                android:fontFamily="@font/rubik"
+                android:gravity="center"
+                android:hint="xxx"
+                android:padding="@dimen/dim20dp"
+                android:text="123"
+                android:textSize="@dimen/dim14sp" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim20dp"
+            android:background="@drawable/rect_white_fill_back"
+            android:fontFamily="@font/rubik"
+            android:gravity="center"
+            android:hint="Cardholder’s Name"
+            android:padding="@dimen/dim20dp"
+            android:textSize="@dimen/dim14sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btAddCard"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dim40dp"
+            android:background="@drawable/rect_fill_back"
+            android:fontFamily="@font/rubik"
+            android:text="Add"
+            android:textColor="@color/white" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragments.GetPremiumMembershipFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vpPremium"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:visibility="gone" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="350dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/viewpager_image" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="bottom"
+                        android:gravity="bottom"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPlanTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_medium"
+                            android:gravity="center"
+                            android:text="Go premium\nGet unlimited access"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvPlanText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim10dp"
+                            android:fontFamily="@font/rubik"
+                            android:gravity="center"
+                            android:text="When you subscribe, you’ll gain \ninstant unlimited access"
+                            android:textColor="@color/light_blue_black"
+                            android:textSize="@dimen/dim14sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBackPremium"
+                    android:layout_width="@dimen/dim25dp"
+                    android:layout_height="@dimen/dim25dp"
+                    android:layout_margin="@dimen/dim15dp"
+                    android:src="@drawable/back_icon"
+                    android:tint="@color/black" />
+
+            </FrameLayout>
+
+            <com.make.dots.dotsindicator.DotsIndicator
+                android:id="@+id/dotsIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="12dp"
+                android:padding="6dp"
+                android:visibility="gone"
+                app:dot_drawable="@drawable/dot_selected"
+                app:dot_drawable_unselected="@drawable/ic_dot_lightgrey"
+                app:dot_height="8dp"
+                app:dot_margin="6dp"
+                app:dot_width="8dp" />
+
+            <FrameLayout
+                android:id="@+id/flYearlyPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/dim20dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/p_membership_price_back"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSavingPercentage"
+                        android:layout_width="@dimen/dim100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginEnd="@dimen/dim20dp"
+                        android:background="@drawable/save_percentage_back"
+                        android:gravity="center"
+                        android:text="SAVE 30%"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/dim12sp" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingStart="@dimen/dim20dp"
+                        android:paddingEnd="@dimen/dim20dp"
+                        android:paddingBottom="@dimen/dim20dp">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvYearPerMonthPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_medium"
+                            android:text="$4.99"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dim18sp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvFullYearPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dim5dp"
+                            android:fontFamily="@font/rubik"
+                            android:text="$4.99/month, billed yearly $60"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dim12sp" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivYearlySelected"
+                    android:layout_width="@dimen/dim25dp"
+                    android:layout_height="@dimen/dim25dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_margin="@dimen/dim20dp"
+                    android:src="@drawable/for_male_selection" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flMonthlyPlan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/dim20dp"
+                android:layout_marginEnd="@dimen/dim20dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/build_monthly_bg"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dim20dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMonthPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_medium"
+                        android:text="$5.99"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/dim18sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBilledMonthly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim5dp"
+                        android:fontFamily="@font/rubik"
+                        android:text="Billed monthly $5.99"
+                        android:textSize="@dimen/dim12sp" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivMonthlySelected"
+                    android:layout_width="@dimen/dim25dp"
+                    android:layout_height="@dimen/dim25dp"
+                    android:layout_gravity="end|bottom"
+                    android:layout_margin="@dimen/dim20dp"
+                    android:src="@drawable/for_female_selection"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivGoPremium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/go_premium_btn" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:fontFamily="@font/rubik"
+                android:gravity="center"
+                android:text="Subscription billed as one payment. Recurring \nbilling. Cancel anytime for any reason"
+                android:textSize="@dimen/dim12sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:layout_marginBottom="@dimen/dim30dp"
+                android:fontFamily="@font/rubik"
+                android:gravity="center"
+                android:text="Terms • Privacy Policy"
+                android:textSize="@dimen/dim10sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+</androidx.appcompat.widget.LinearLayoutCompat>

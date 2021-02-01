@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/dim10dp"
+        app:cardCornerRadius="@dimen/dim10dp">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dim20dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/congratulations"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/dim18sp"
+                app:fontFamily="@font/rubik_medium" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:gravity="center"
+                android:text="@string/click_on_continue_to_start_enjoy_your_premium_membership"
+                android:textColor="@color/app_color"
+                android:textSize="@dimen/dim14sp"
+                app:fontFamily="@font/rubik" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btPaymentSuccess"
+                android:layout_width="@dimen/dim150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dim20dp"
+                android:background="@drawable/rect_fill_back"
+                android:fontFamily="@font/rubik_medium"
+                android:text="@string/conitnue"
+                android:textColor="@color/white" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.cardview.widget.CardView>
+</androidx.appcompat.widget.LinearLayoutCompat>

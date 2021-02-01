@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="black">#000</color>
+    <color name="light_black">#75000000</color>
+    <color name="extra_light_black">#99000000</color>
+    <color name="white">#fff</color>
+    <color name="app_color">#7265E3</color>
+    <color name="light_blue_black">#4C5980</color>
+    <color name="a_plus">#030047</color>
+    <color name="a_minus">#4C5980</color>
+    <color name="b_plus">#FF3E6C</color>
+    <color name="b_minus">#FF9B90</color>
+    <color name="o_plus">#1F87FE</color>
+    <color name="o_minus">#8FACFF</color>
+    <color name="ab_plus">#EDBD39</color>
+    <color name="ab_minus">#7FE3F0</color>
+    <color name="darker_gray">#aaa</color>
+    <color name="light_color_back">#F4F6FA</color>
+    <color name="light_blue">#E4DFFF</color>
+    <color name="profile_back_color">#90acfe</color>
+    <color name="light_app_color">#e4dfff</color>
+    <!--color list for customize interests-->
+    <color name="color_one">#7FE3F0</color>
+    <color name="color_two">#AF8EFF</color>
+    <color name="color_three">#FF9B90</color>
+    <color name="color_four">#59B9FD</color>
+    <color name="selected_color">#B3070707</color>
+    <!--color list end-->
+
+    <color name="seek_bar_background">#ababab</color>
+    <color name="seek_bar_progress">#ffb600</color>
+    <color name="seek_bar_secondary_progress">#3399CC</color>
+</resources>

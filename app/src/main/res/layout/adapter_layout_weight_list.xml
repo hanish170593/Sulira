@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dim10dp"
+    android:orientation="vertical">
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDate"
+        android:layout_width="@dimen/dim0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik"
+        android:textColor="@color/black"
+        android:text="Wednesday, 23"
+        android:layout_weight="1"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvProgressData"
+        android:layout_width="@dimen/dim0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rubik"
+        android:textColor="@color/black"
+        android:gravity="end"
+        android:text="50.5"
+        android:layout_weight="1"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.appcompat.widget.LinearLayoutCompat>

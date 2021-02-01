@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/weighIcon"
+        android:layout_width="@dimen/dim150dp"
+        android:layout_height="@dimen/dim150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:background="@drawable/weight_screen_icon_back">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dim50dp"
+            android:layout_height="@dimen/dim100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/excersize" />
+    </FrameLayout>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/step1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weighIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:fontFamily="@font/rubik"
+        android:text="Step 8/13"
+        android:textColor="@color/app_color"
+        android:textSize="@dimen/dim10sp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/letsStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim10dp"
+        android:fontFamily="@font/rubik_medium"
+        android:gravity="center"
+        android:text="@string/do_you_exercise"
+        android:textColor="@color/black"
+        android:textSize="@dimen/dim18sp" />
+
+    <RelativeLayout
+        android:id="@+id/weightLbs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/letsStart"
+        android:layout_marginTop="@dimen/dim20dp"
+        android:elevation="@dimen/dim10dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btExerciseYes"
+            android:layout_width="@dimen/dim80dp"
+            android:layout_height="@dimen/dim40dp"
+            android:background="@drawable/rect_fill_back"
+            android:elevation="@dimen/dim10dp"
+            android:fontFamily="@font/rubik"
+            android:text="Yes"
+            android:textColor="@color/white" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btExerciseNo"
+            android:layout_width="@dimen/dim80dp"
+            android:layout_height="@dimen/dim40dp"
+            android:layout_marginStart="@dimen/dim20dp"
+            android:layout_toEndOf="@+id/btExerciseYes"
+            android:background="@drawable/rect_white_fill_back"
+            android:elevation="@dimen/dim10dp"
+            android:fontFamily="@font/rubik"
+            android:text="No" />
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/ifYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weightLbs"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim30dp"
+        android:fontFamily="@font/rubik"
+        android:text="@string/if_yes_how_often"
+        android:textColor="@color/light_blue_black"
+        android:textSize="@dimen/dim16sp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llSpn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ifYes"
+        android:layout_marginStart="@dimen/dim40dp"
+        android:layout_marginTop="@dimen/dim15dp"
+        android:layout_marginEnd="@dimen/dim40dp"
+        android:elevation="@dimen/dim10dp"
+        android:background="@drawable/rect_white_fill_back"
+        android:orientation="horizontal"
+        android:padding="@dimen/dim15dp">
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spnIfYes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:elevation="@dimen/dim10dp"
+            android:gravity="center"
+            android:textAlignment="center" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/dim15dp"
+            android:layout_height="@dimen/dim15dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/down_excer_arrow"
+            app:tint="@color/black" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btExerciseContinue"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llSpn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dim40dp"
+        android:background="@drawable/rect_fill_back"
+        android:fontFamily="@font/rubik"
+        android:text="@string/conitnue"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

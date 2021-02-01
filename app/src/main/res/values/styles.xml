@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    -<style name="AppTheme.NoActionBar">
+
+    <item name="windowActionBar">false</item>
+
+    <item name="windowNoTitle">true</item>
+
+</style>
+    <style parent="ThemeOverlay.AppCompat.Dark.ActionBar" name="AppTheme.AppBarOverlay"/>
+
+    <style parent="ThemeOverlay.AppCompat.Light" name="AppTheme.PopupOverlay"/>
+    <style name="SheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <!--<item name="android:windowCloseOnTouchOutside">false</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <style name="checkbox_style" parent="Base.Theme.AppCompat">
+        <item name="colorAccent">@color/white</item> <!-- for uncheck state -->
+        <item name="android:textColorSecondary">@color/light_black</item> <!-- for check state -->
+    </style>
+    <style name="ratingStyle" parent="android:Widget.Material.RatingBar.Small" tools:targetApi="lollipop" />
+
+    <style name="ratingStylerating" parent="android:Widget.Material.Light.RatingBar.Indicator" tools:targetApi="lollipop">
+
+    </style>
+</resources>
