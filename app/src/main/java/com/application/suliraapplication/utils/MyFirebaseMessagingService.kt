@@ -37,6 +37,9 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
     override fun onMessageReceived(message: RemoteMessage) {
         super.onMessageReceived(message)
         Log.d("onMessageReceived", "balalalal" + message.data)
+        if (message.data.isNotEmpty()) {
+            sendNotification(message.data["title"].toString(), message.data["body"].toString());
+        }
     }
 
     /*Send Notification*/
@@ -90,11 +93,13 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 //            Uri soundUri = Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" +
 //                    getApplicationContext().getPackageName() + "/" + R.raw.notification);
+
             mChannel = NotificationChannel(
                 channelId,
                 "Sulira Channel",
                 NotificationManager.IMPORTANCE_HIGH
             )
+
             mChannel.lightColor = Color.BLUE
             mChannel.enableLights(true)
             mChannel.setShowBadge(true)
