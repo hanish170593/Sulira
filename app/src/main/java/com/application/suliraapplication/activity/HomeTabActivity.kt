@@ -148,7 +148,7 @@ open class HomeTabActivity : BaseActivity(), View.OnClickListener, View.OnTouchL
             ContextCompat.getColor(this, R.color.black),
             android.graphics.PorterDuff.Mode.MULTIPLY
         );
-        replaceFragment(WeightReminderFragment())
+        replaceFragment(HomeScreenFragment())
     }
 
     fun showBottomSheetHowAreYouFeeling() {

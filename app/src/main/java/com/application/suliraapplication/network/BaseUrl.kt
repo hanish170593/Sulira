@@ -46,4 +46,5 @@ object BaseUrl {
     const val ADD_FEEDBACK = "addFeedback"
     const val USER_NOTIFY_SCHEDULE = "setUserSchedules"
     const val GET_USER_SCHEDULE= "getUserSchedules"
+    const val POST_FEELING = "postFeeling"
 }

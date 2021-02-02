@@ -294,4 +294,11 @@ interface UserService {
         @Field("userId") userId: String,
         @Field("type") type: String
     ): Observable<GetUserScheduleModel>
+
+    @POST(BaseUrl.POST_FEELING)
+    @FormUrlEncoded
+    fun postFeeling(
+        @Field("userId") userId: String,
+        @Field("feelingTitle") feelingTitle: String
+    ): Observable<CustomSuccessResponse>
 }

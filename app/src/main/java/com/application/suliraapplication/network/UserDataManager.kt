@@ -232,20 +232,44 @@ class UserDataManager {
         return apiManager.userService.getUserInfo(userId)
     }
 
-    fun addFeedBack(userId:String,userFeedback:String,userSuggestion:String):Observable<CustomSuccessResponse>{
-            return  apiManager.userService.addFeedBack(userId,userFeedback,userSuggestion)
+    fun addFeedBack(
+        userId: String,
+        userFeedback: String,
+        userSuggestion: String
+    ): Observable<CustomSuccessResponse> {
+        return apiManager.userService.addFeedBack(userId, userFeedback, userSuggestion)
     }
 
-    fun updateSleepHealthLog(userId: String,healthType: String, healthValue: String, sleep_at: String,wakeup_at: String):Observable<CustomSuccessResponse>{
-        return  apiManager.userService.updateSleepHealthLog(userId,healthType,healthValue,sleep_at,wakeup_at)
+    fun updateSleepHealthLog(
+        userId: String,
+        healthType: String,
+        healthValue: String,
+        sleep_at: String,
+        wakeup_at: String
+    ): Observable<CustomSuccessResponse> {
+        return apiManager.userService.updateSleepHealthLog(
+            userId,
+            healthType,
+            healthValue,
+            sleep_at,
+            wakeup_at
+        )
     }
 
-    fun updateUserSchedule(userId: String,type: String,days: String):Observable<CustomSuccessResponse>{
-        return  apiManager.userService.updateUserSchedule(userId,type,days)
+    fun updateUserSchedule(
+        userId: String,
+        type: String,
+        days: String
+    ): Observable<CustomSuccessResponse> {
+        return apiManager.userService.updateUserSchedule(userId, type, days)
     }
 
-    fun getUserSchedule(userId: String,type: String):Observable<GetUserScheduleModel>{
-        return apiManager.userService.getUserSchedule(userId,type)
+    fun getUserSchedule(userId: String, type: String): Observable<GetUserScheduleModel> {
+        return apiManager.userService.getUserSchedule(userId, type)
+    }
+
+    fun postFeeling(userId: String, feelingTitle: String): Observable<CustomSuccessResponse> {
+        return apiManager.userService.postFeeling(userId, feelingTitle)
     }
 
 }

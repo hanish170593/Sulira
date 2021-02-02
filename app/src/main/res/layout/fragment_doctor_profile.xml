@@ -73,6 +73,7 @@
                     android:textSize="20sp" />
 
                 <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPhoneCallDoc"
                     android:layout_width="@dimen/dim30dp"
                     android:layout_height="@dimen/dim30dp"
                     android:layout_gravity="center"

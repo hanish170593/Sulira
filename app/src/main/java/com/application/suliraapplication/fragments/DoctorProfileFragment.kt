@@ -1,5 +1,7 @@
 package com.application.suliraapplication.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +21,7 @@ import com.application.suliraapplication.viewmodels.DoctorDetailViewModel
 import com.bumptech.glide.Glide
 import com.google.gson.Gson
 import kotlinx.android.synthetic.main.fragment_doctor_profile.*
+
 
 class DoctorProfileFragment(val doctorId: String) : BaseFragment(), View.OnClickListener {
     private lateinit var adapterDoctorActivitiesList: AdapterDoctorActivitiesList
@@ -46,6 +49,8 @@ class DoctorProfileFragment(val doctorId: String) : BaseFragment(), View.OnClick
         ivBackDoctorProfile.setOnClickListener(this)
 
         ivChatWithDoctor.setOnClickListener(this)
+
+        ivPhoneCallDoc.setOnClickListener(this)
 
         doctorDetailViewModel.successful.observe(requireActivity(), Observer {
 
@@ -132,6 +137,14 @@ class DoctorProfileFragment(val doctorId: String) : BaseFragment(), View.OnClick
                     PreferenceManager().userId.toString(),
                     doctorDetailModel.doctorDetail.id
                 )
+            }
+
+            ivPhoneCallDoc -> {
+                val intent = Intent(
+                    Intent.ACTION_DIAL,
+                    Uri.fromParts("tel", doctorDetailModel.doctorDetail.doctorMobile, null)
+                )
+                startActivity(intent)
             }
 
         }
